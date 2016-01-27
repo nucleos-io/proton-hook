@@ -1,6 +1,6 @@
 {
-  "name": "proton-hook",
-  "version": "1.0.1",
+  "name": "proton-quark",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {

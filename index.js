@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = class Hook {
+module.exports = class Quark {
 
   constructor(proton) {
     this.proton = proton
