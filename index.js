@@ -13,18 +13,6 @@ class Quark {
   }
 
   /**
-   * @method initialize
-   * @description initialize is the main method of every quark,therefore is
-   * required, in this mehtod should do things as bind objects or middlewares
-   * to proton
-   * @return {Boolean} false
-   * @author Luis Hernandez
-   */
-  initialize() {
-    return Promise.reject()
-  }
-
-  /**
    * @method validate
    * @description sometimes is necesary validate things before initialize
    * a quark, for such things is this method, for example if the connection
@@ -50,10 +38,22 @@ class Quark {
   }
 
   /**
+   * @method initialize
+   * @description initialize is the main method of every quark,therefore is
+   * required, in this mehtod should do things as bind objects or middlewares
+   * to proton
+   * @return {Boolean} false
+   * @author Luis Hernandez
+   */
+  initialize() {
+    throw new Error('This method must be implemented')
+  }
+
+  /**
    * @method bindToApp
    * @description
    */
-  bindToApp() {
+  bindToApp(...args) {
     return Promise.resolve()
   }
 
@@ -61,7 +61,7 @@ class Quark {
    * @method bindToProton
    * @description
    */
-  bindToProton() {
+  bindToProton(...args) {
     return Promise.resolve()
   }
 
