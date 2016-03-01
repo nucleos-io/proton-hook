@@ -1,18 +1,15 @@
 'use strict'
 
-const Bindable = require('proton-bindable')
-
 /**
  * @class Quark is an abstract class for creating quarks in proton
  * @classdesc A quark is a component of a proton application, every quark
  * has a life cycle consisting of 3 steps, validate -> configure -> initialize
- * @extends Bindable
  * @author Luis Hernandez
  */
-class Quark extends Bindable {
+class Quark {
 
   constructor(proton) {
-    super(proton)
+    this.proton = proton
   }
 
   /**
@@ -49,6 +46,22 @@ class Quark extends Bindable {
    * @author Luis Hernandez
    */
   configure() {
+    return Promise.resolve()
+  }
+
+  /**
+   * @method bindToApp
+   * @description
+   */
+  bindToApp() {
+    return Promise.resolve()
+  }
+
+  /**
+   * @method bindToProton
+   * @description
+   */
+  bindToProton() {
     return Promise.resolve()
   }
 
