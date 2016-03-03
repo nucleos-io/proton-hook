@@ -49,22 +49,6 @@ class Quark {
     throw new Error('This method must be implemented')
   }
 
-  /**
-   * @method bindToApp
-   * @description
-   */
-  bindToApp(...args) {
-    return Promise.resolve()
-  }
-
-  /**
-   * @method bindToProton
-   * @description
-   */
-  bindToProton(...args) {
-    return Promise.resolve()
-  }
-
 }
 
 module.exports = Quark
