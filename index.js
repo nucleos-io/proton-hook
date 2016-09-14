@@ -67,6 +67,10 @@ class Quark {
     return this.proton.after.apply(this.proton, arguments)
   }
 
+  get name() {
+    return this.constructor.name
+  }
+
 }
 
 module.exports = Quark
