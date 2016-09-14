@@ -49,6 +49,24 @@ class Quark {
     throw new Error('This method must be implemented')
   }
 
+  on() {
+    return this.proton.on.apply(this, arguments)
+  }
+
+  emit() {
+    const [eventName] = arguments
+    this.proton.events[eventName] = true
+    return this.proton.emit.apply(this.proton, arguments)
+  }
+
+  once() {
+    return this.proton.once.apply(this.proton, arguments)
+  }
+
+  after() {
+    return this.proton.after.apply(this.proton, arguments)
+  }
+
 }
 
 module.exports = Quark
